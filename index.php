@@ -3,7 +3,7 @@
 session_start();
 //var_dump($_SESSION);
  if (isset($_SESSION['fb_access_token'] )) {
-	header('location: https://'.$_SERVER['HTTP_HOST'].'/dashboard_main.php');
+	header('location: http://'.$_SERVER['HTTP_HOST'].'/dashboard_main.php');
  }
 ?>
 <!DOCTYPE html>
@@ -74,7 +74,7 @@ session_start();
 							'user_photos',
 							'read_insights'
 						);
-						$loginUrl = $helper->getLoginUrl('location: https://'.$_SERVER['HTTP_HOST'].'/dashboard_main.php', $permissions);
+						$loginUrl = $helper->getLoginUrl('location: http://'.$_SERVER['HTTP_HOST'].'/dashboard_main.php', $permissions);
 					?>
 						<a href="<?php echo $loginUrl; ?>" class="btn-login-with bg1 m-b-10">
 							<i class="fa fa-facebook-official"></i>
