@@ -67,14 +67,14 @@ session_start();
 					</div>
 					<div>
 					<?php
-						//include 'fb_config.php';
-						// $helper = $fb->getRedirectLoginHelper();
-						// $permissions = array(
-							// 'email',
-							// 'user_photos',
-							// 'read_insights'
-						// );
-						// $loginUrl = $helper->getLoginUrl('location: https://'.$_SERVER['HTTP_HOST'].'/dashboard_main.php', $permissions);
+						include 'fb_config.php';
+						$helper = $fb->getRedirectLoginHelper();
+						$permissions = array(
+							'email',
+							'user_photos',
+							'read_insights'
+						);
+						$loginUrl = $helper->getLoginUrl('location: https://'.$_SERVER['HTTP_HOST'].'/dashboard_main.php', $permissions);
 					?>
 						<a href="<?php echo $loginUrl; ?>" class="btn-login-with bg1 m-b-10">
 							<i class="fa fa-facebook-official"></i>
