@@ -75,7 +75,7 @@ if (!isset($_SESSION['fb_access_token'] )) {
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
    <!-- bootstrap-daterangepicker -->
     <link href="assets/css/daterangepicker.css" rel="stylesheet"> 
     <!-- Custom Theme Style -->
