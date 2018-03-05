@@ -195,7 +195,7 @@ if (!isset($_SESSION['fb_access_token'] )) {
 						  <span class="count_top"><i class="fa fa-clock-o"></i> Total  Reactions</span>
 						  <div class="count" id="totalReaction"><?php 
 							$sentimenter = new SentimentIntensityAnalyzer();
-							$noOfPosts = json_decode(file_get_contents("https://graph.facebook.com/v2.9/".$globPageId[0]."/?fields=feed.limit(100000)&access_token=".$accessToken1.""),true);
+							$noOfPosts = json_decode(file_get_contents("https://graph.facebook.com/v2.9/".$globPageId[0]."/?fields=feed.limit(100)&access_token=".$accessToken1.""),true);
 							//$cnt=count($noOfPosts);
 							$postcnt=0;
 							$commentCount1=0;
@@ -210,7 +210,7 @@ if (!isset($_SESSION['fb_access_token'] )) {
 											foreach($feed as $data1) {
 												//echo $data1['id'];
 												$postcnt++;
-												$noOfComments = json_decode(file_get_contents("https://graph.facebook.com/v2.9/".$data1['id']."/comments?limit=10000&access_token=".$accessToken1.""),true);
+												$noOfComments = json_decode(file_get_contents("https://graph.facebook.com/v2.9/".$data1['id']."/comments?limit=100&access_token=".$accessToken1.""),true);
 												foreach($noOfComments as $key2=>$comments) {
 													// echo "<pre>";
 													// print_r($comments);
