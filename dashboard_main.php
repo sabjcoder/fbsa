@@ -7,7 +7,7 @@ include 'fb_config.php';
 $helper = $fb->getRedirectLoginHelper();
 if(isset($_GET['logout']))
 {
-	$fbLogoutUrl = $helper->getLogoutUrl($_SESSION['fb_access_token'], 'http://localhost:81/fb_sentiment/index.php');    
+	$fbLogoutUrl = $helper->getLogoutUrl($_SESSION['fb_access_token'], 'https://fbsa-sentiment.herokuapp.com/index.php');    
 	session_destroy();
 	unset($_SESSION['access_token']);
 	header("Location: $fbLogoutUrl");
