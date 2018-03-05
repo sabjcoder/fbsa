@@ -1,9 +1,9 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-$appId = '440948386100123';
+$appId = '131460884347524';
 $fb = new Facebook\Facebook([
 	'app_id' => $appId,
-	'app_secret' => '312ca3c39c54e75c4d2932a2f38fdeb8',
-	'default_graph_version' => 'v2.5',
+	'app_secret' => '2b1786c5c413be56531c8b613898942a',
+	'default_graph_version' => 'v2.12',
 ]);
 ?>
