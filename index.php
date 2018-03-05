@@ -4,7 +4,7 @@ if (!session_id()) {
     
 }
 if (isset($_SESSION['fb_access_token'] )) {
-	header('location: http://localhost:81/fb_sentiment/dashboard_main.php');
+	header('location: https://fbsa-sentiment.herokuapp.com/dashboard_main.php');
 	exit;
 }
 ?>
@@ -76,7 +76,7 @@ if (isset($_SESSION['fb_access_token'] )) {
 							'user_photos',
 							'read_insights'
 						);
-						$loginUrl = $helper->getLoginUrl('http://localhost:81/fb_sentiment/dashboard_main.php', $permissions);
+						$loginUrl = $helper->getLoginUrl('https://fbsa-sentiment.herokuapp.com/dashboard_main.php', $permissions);
 					?>
 						<a href="<?php echo $loginUrl; ?>" class="btn-login-with bg1 m-b-10">
 							<i class="fa fa-facebook-official"></i>
